@@ -5,8 +5,10 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def result():
     try:
+        print(request.form['test'])
         return request.form['test']
     except Exception as e:
+        print(e)
         return e
 
 if __name__ == "__main__":
