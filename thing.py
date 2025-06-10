@@ -4,9 +4,9 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def result():
     try:
-        data = request.get_json()
+        data = request.form.to_dict()
         print("testing")
-        print(f"Received log data: {data['test']}")
+        print(f"Received log data: {data}")
         return "work"
     except Exception as e:
         return "error"
