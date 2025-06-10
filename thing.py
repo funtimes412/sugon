@@ -5,10 +5,10 @@ app = Flask(__name__)
 @app.route('/', methods=['POST'])
 def result():
     try:
-        print(request.form['test'])
+        data = request.get_json()
+        print(f"Received log data: {data['test']}")
         return "work"
     except Exception as e:
-        print(e)
         return "error"
 
 if __name__ == "__main__":
