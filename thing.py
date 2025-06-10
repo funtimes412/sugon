@@ -6,7 +6,7 @@ app = Flask(__name__)
 def result():
     try:
         data = request.get_json()
-        print(data)
+        print("testing")
         print(f"Received log data: {data['test']}")
         return "work"
     except Exception as e:
