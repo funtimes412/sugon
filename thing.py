@@ -11,8 +11,11 @@ def receive_data():
 
         if 'test' in data: 
             print(f"Value of 'test' key: {data['test']}")
+            return None
         else:
             print("JSON data does not contain a 'test' key.")
+            return None
+        return None
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=8000,debug=True)
